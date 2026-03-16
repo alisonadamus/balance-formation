@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="@style.css"
+            fx:controller="com.balanceformation.CreditworthinessController">
+    <VBox spacing="12" >
+
+        <Label text="Оберіть дані для розрахунку"/>
+
+        <Label text="Баланс Форма-1"/>
+        <ComboBox fx:id="balance1Combo" prefWidth="400"/>
+
+        <Label text="Баланс Форма-2"/>
+        <ComboBox fx:id="balance2Combo" prefWidth="400"/>
+
+        <Label text="Група G2 - аналіз прибутків та збитків "/>
+        <ComboBox fx:id="group2Combo" prefWidth="400"/>
+
+        <GridPane hgap="10" vgap="10" alignment="CENTER">
+
+            <Label text="Термін існування:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="yearsExistField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Власні кошти (K):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="ownFundsField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Ліквідне майно (M):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="liquidAssetsField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        </GridPane>
+
+        <Button text="Обчислити кредитоспроможність"
+                onAction="#onCalculate"/>
+
+        <Label fx:id="resultLabel"/>
+
+        <!-- TABLE -->
+        <TableView fx:id="table" minHeight="200" prefHeight="300" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colName" text="Критерій"/>
+                <TableColumn fx:id="colK" text="Оцінка K"/>
+                <TableColumn fx:id="colMu" text="μ(K)"/>
+            </columns>
+        </TableView>
+
+        <Label text="Вагові коефіцієнти (1-10)"/>
+
+        <!-- ВАГИ -->
+        <GridPane hgap="10" vgap="10">
+            <TextField fx:id="w1" promptText="K1" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="w2" promptText="K2" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <TextField fx:id="w3" promptText="K3" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <TextField fx:id="w4" promptText="K4" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="w5" promptText="K5" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <TextField fx:id="w6" promptText="K6" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <TextField fx:id="w7" promptText="K7" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="w8" promptText="K8" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <TextField fx:id="w9" promptText="K9" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+            <TextField fx:id="w10" promptText="K10" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="w11" promptText="K11" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button text="Визначити рейтинг кредитоспроможності"
+                onAction="#onCalculateRating"/>
+
+        <Label fx:id="ratingLabel"/>
+
+    </VBox>
+</ScrollPane>

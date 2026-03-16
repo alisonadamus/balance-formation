@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx" fx:id="root"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="@style.css"
+            fx:controller="com.balanceformation.BalanceForm2Controller">
+    <VBox spacing="10">
+
+        <!-- I. Financial Results -->
+        <Label text="I. Фінансові результати"/>
+        <TitledPane text="Фінансові результати">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Чистий дохід від реалізації" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="netRevenueField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Собівартість реалізованої продукції" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="costOfGoodsSoldField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Інші операційні доходи" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherOperatingIncomeField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Адміністративні витрати" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="administrativeExpensesField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Витрати на збут" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="sellingExpensesField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Інші операційні витрати" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherOperatingExpensesField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Дохід від участі в капіталі" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="incomeFromEquityParticipationField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Інші фінансові доходи" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherFinancialIncomeField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                <Label text="Інші доходи" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherIncomeField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                <Label text="Фінансові витрати" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                <TextField fx:id="financialExpensesField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+                <Label text="Втрати від участі в капіталі" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+                <TextField fx:id="lossesFromEquityParticipationField" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+                <Label text="Інші витрати" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherExpensesField" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+
+                <Label text="Витрати (дохід) з податку на прибуток" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+                <TextField fx:id="incomeTaxExpensesField" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+
+                <Label text="Прибуток/збиток від припиненої діяльності" GridPane.rowIndex="13"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="profitFromDiscontinuedOperationsField" GridPane.rowIndex="13"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Чистий фінансовий результат" GridPane.rowIndex="14" GridPane.columnIndex="0"/>
+                <Label fx:id="netFinancialResultLabel" GridPane.rowIndex="14" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+
+        <!-- II. Comprehensive Income -->
+        <Label text="II. Сукупний дохід"/>
+        <TitledPane text="Сукупний дохід">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Дооцінка необоротних активів" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="revaluationNonCurrentAssetsField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Дооцінка фінансових інструментів" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="revaluationFinancialInstrumentsField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Накопичені курсові різниці" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="accumulatedCurrencyDifferencesField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Частка іншого сукупного доходу асоційованих" GridPane.rowIndex="3"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="shareOfOtherComprehensiveIncomeAssocField" GridPane.rowIndex="3"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Інший сукупний дохід" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherComprehensiveIncomeField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Інший сукупний дохід до оподаткування" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherComprehensiveIncomeBeforeTaxField" GridPane.rowIndex="5"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Податок на прибуток, пов’язаний з іншим сукупним доходом" GridPane.rowIndex="6"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="taxOnOtherComprehensiveIncomeField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Інший сукупний дохід після оподаткування" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <Label fx:id="otherComprehensiveIncomeAfterTaxLabel" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                <Label text="Сукупний дохід" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                <Label fx:id="totalComprehensiveIncomeLabel" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+
+        <!-- III. Operating Expenses -->
+        <Label text="III. Елементи операційних витрат"/>
+        <TitledPane text="Операційні витрати">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Матеріальні затрати" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="materialCostsField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Витрати на оплату праці" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="payrollExpensesField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Відрахування на соціальні заходи" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="socialSecurityContributionsField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Амортизація" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="depreciationField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Інші операційні витрати" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherOperatingExpensesOpField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Разом" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <Label fx:id="totalOperatingExpensesLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+
+        <!-- IV. Share Profitability Indicators -->
+        <Label text="IV. Розрахунок показників прибутковості акцій"/>
+        <TitledPane text="Показники прибутковості акцій">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Середньорічна кількість простих акцій" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="averageNumberOfSharesField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Скоригована середньорічна кількість простих акцій" GridPane.rowIndex="1"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="adjustedAverageNumberOfSharesField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Чистий прибуток (збиток) на одну просту акцію" GridPane.rowIndex="2"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="netProfitPerShareField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Скоригований чистий прибуток (збиток) на одну просту акцію" GridPane.rowIndex="3"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="adjustedNetProfitPerShareField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Дивіденди на одну просту акцію" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="dividendsPerShareField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+
+        <Button text="Зберегти" onAction="#handleSave"/>
+        <Button text="Вивести аналіз прибутків та збитків" onAction="#goToGroup2"/>
+    </VBox>
+</ScrollPane>
