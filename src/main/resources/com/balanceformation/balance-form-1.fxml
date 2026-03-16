@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<ScrollPane xmlns="http://javafx.com/javafx" fx:id="root"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="@style.css"
+            fx:controller="com.balanceformation.BalanceForm1Controller">
+    <VBox spacing="10">
+
+        <Label text="АКТИВИ"/>
+
+        <TitledPane text="Необоротні активи">
+            <VBox spacing="5">
+                <GridPane hgap="10" vgap="5">
+                    <Label text="Нематеріальні активи" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="intangibleInitialCostField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Накопичена амортизація" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="intangibleAmortizationField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Незавершені інвестиції" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="unfinishedInvestmentsField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Label text="Первісна вартість основних засобів" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextField fx:id="fixedAssetsInitialCostField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                    <Label text="Знос основних засобів" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <TextField fx:id="fixedAssetsDepreciationField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                    <Label text="Інвестиційна нерухомість" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <TextField fx:id="investmentPropertyField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                    <Label text="Довгострокові біологічні активи" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                    <TextField fx:id="longTermBiologicalAssetsField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                    <Label text="Довгострокові фінансові інвестиції Акціонерний капітал" GridPane.rowIndex="7"
+                           GridPane.columnIndex="0"/>
+                    <TextField fx:id="longTermFinancialInvestmentsEquityField" GridPane.rowIndex="7"
+                               GridPane.columnIndex="1"/>
+
+                    <Label text="Інші фінансові інвестиції" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                    <TextField fx:id="otherFinancialInvestmentsField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                    <Label text="Довгострокова дебіторська заборгованість" GridPane.rowIndex="9"
+                           GridPane.columnIndex="0"/>
+                    <TextField fx:id="longTermReceivablesField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+                    <Label text="Відстрочені податкові активи" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+                    <TextField fx:id="deferredTaxAssetsField" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+                    <Label text="Інші необоротні активи" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+                    <TextField fx:id="otherNonCurrentAssetsField" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+
+                    <Label text="Необоротні активи на продаж" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+                    <TextField fx:id="nonCurrentAssetsForSaleField" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+                </GridPane>
+            </VBox>
+        </TitledPane>
+
+        <TitledPane text="Оборотні активи ">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Запаси" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="inventoriesField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Поточні біологічні активи" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="biologicalAssetsCurrentField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Дебіторська заборгованість за продукцію" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="receivablesProductsField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Дебіторська заборгованість за виданими авансами" GridPane.rowIndex="3"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="advancesIssuedField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Дебіторська заборгованість з бюджетом" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="receivablesBudgetField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Дебіторська заборгованість з податку на прибуток" GridPane.rowIndex="5"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="incomeTaxReceivableField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Інша Дебіторська заборгованість" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherReceivablesField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Поточні фінансові інвестиції" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <TextField fx:id="currentFinancialInvestmentsField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                <Label text="Гроші та їх еквівадленти" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                <TextField fx:id="cashField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                <Label text="Витрати майбутніх періодів" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                <TextField fx:id="prepaidExpensesField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+                <Label text="Інші оборотні активи" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherCurrentAssetsField" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+
+        <Label text="ПАСИВИ"/>
+
+        <TitledPane text="Власний каптіал">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Зареєстрований капітал" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="registeredCapitalField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Капітал у дооцінках" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="revaluationCapitalField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="додатковий капітал" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="additionalCapitalField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Резервний капітал" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="reserveCapitalField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Нерозподілений прибуток" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="retainedEarningsField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Необплачений капітал" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="unpaidCapitalField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Вилучений капітал" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="withdrawnCapitalField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+
+        <TitledPane text="Довгострокові зобов'язанння і забезпечення ">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Відстрочені податкові зобов'язання" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="deferredTaxLiabilitiesField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Довгострокові кредити банків" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="longTermBankLoansField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="інші довгострокові зобовязання" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherLongTermLiabilitiesField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="довготривалі забезпечення" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="longTermProvisionsField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="цільове фінансування" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="targetedFinancingField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+
+        <TitledPane text="Поточні зобов'язанння і забезпечення">
+            <GridPane hgap="10" vgap="5">
+                <Label text="Короткострокові кредити банків" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="shortTermLoansField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Кредиторська заборгованість за довготривалим зобов'язанням" GridPane.rowIndex="1"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="payableLongTermField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Кредиторська заборгованість за товари..." GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="payableSuppliersField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Кредиторська заборгованість за бюджетом" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="payableBudgetField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Кредиторська заборгованість за податку на прибуток" GridPane.rowIndex="4"
+                       GridPane.columnIndex="0"/>
+                <TextField fx:id="incomeTaxPayableField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="розрахунки зі страхування" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="insurancePayableField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="розрахунки з оплати праці" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="salaryPayableField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Поточні забезпечення" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <TextField fx:id="currentProvisionsField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                <Label text="Доходи майбутніх періодів" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                <TextField fx:id="deferredIncomeField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                <Label text="Інші поточні зобов'язання" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                <TextField fx:id="otherCurrentLiabilitiesField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+            </GridPane>
+        </TitledPane>
+        <HBox>
+            <Button text="Зберегти баланс" onAction="#handleSave"/>
+            <Button text="Вивести показники фінансової стійкості" onAction="#goToGroup1"/>
+        </HBox>
+
+    </VBox>
+</ScrollPane>

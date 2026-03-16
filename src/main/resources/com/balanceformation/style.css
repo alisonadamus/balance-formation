@@ -1,0 +1,80 @@
+/* Основний контейнер */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f9f9f9;
+}
+
+/* Заголовки секцій */
+.label {
+    -fx-font-weight: bold;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+/* VBox / GridPane padding */
+.vbox, .grid-pane {
+    -fx-padding: 10;
+    -fx-spacing: 8;
+}
+
+/* TextField стиль */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4px;
+    -fx-padding: 4 6 4 6;
+}
+
+/* TextField при фокусі */
+.text-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
+}
+
+/* Label підсумків */
+.label.summary {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Кнопки */
+.button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6 12 6 12;
+}
+
+/* Кнопка при наведенні */
+.button:hover {
+    -fx-background-color: #357ABD;
+    -fx-cursor: hand;
+}
+
+/* Вікно ScrollPane */
+.scroll-pane {
+    -fx-background-color: #f9f9f9;
+}
+
+/* Стиль TitledPane контенту */
+.titled-pane > .content {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #4a90e2;
+    -fx-border-radius: 4px;
+    -fx-padding: 8;
+}
+
+/* Label для виділення заголовків підсумків */
+.label.total-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 13px;
+}
